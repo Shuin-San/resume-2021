@@ -1,7 +1,7 @@
 import Hero from "../layout/Hero";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import * as footerLink from "../data/footerLinks";
+import { footerLinks } from "../data/footerLinks";
 
 const useStyles = makeStyles((theme) => ({
 	footer: {
@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Footer() {
 	const classes = useStyles();
+	console.log(footerLinks);
 	return (
 		<Grid
 			container
@@ -22,9 +23,26 @@ export default function Footer() {
 			direction="row"
 			className={classes.footer}
 		>
-			<Grid item xs={12} md={"auto"} className={classes.footerItem}>
-				TEST
-			</Grid>
+			{footerLinks.map(({ name, icon, link }) => {
+				return (
+					<Grid
+						key={name}
+						item
+						xs={"auto"}
+						md={"auto"}
+						className={classes.footerItem}
+					>
+						<Link
+							href={link}
+							target="_blank"
+							underline="none"
+							color="textPrimary"
+						>
+							{name}
+						</Link>
+					</Grid>
+				);
+			})}
 		</Grid>
 	);
 }

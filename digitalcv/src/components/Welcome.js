@@ -1,5 +1,5 @@
 import Hero from "../layout/Hero";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -27,14 +27,20 @@ export default function Welcome() {
 				</Typography>
 				<Typography variant="subtitle1" component="p" style={{ marginTop: 50 }}>
 					Send me an{" "}
-					<a href="mailto:hello@zalimidis.dev?subject=Contact request">email</a>{" "}
+					<Link
+						color="textPrimary"
+						href="mailto:hello@zalimidis.dev?subject=Contact request"
+					>
+						email
+					</Link>{" "}
 					or contact me via{" "}
-					<a
+					<Link
+						color="textPrimary"
 						href="https://www.linkedin.com/in/vasileioszalimidis/"
 						target="_blank"
 					>
 						LinkedIn
-					</a>
+					</Link>
 				</Typography>
 			</Grid>
 		</Grid>

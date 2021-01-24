@@ -16,7 +16,7 @@ function App() {
 					<Grid item xs={12}>
 						<Header />
 					</Grid>
-					<Grid style={{ minHeight: "85vh" }} item xs={12}>
+					<Grid style={{ minHeight: "80vh" }} item xs={12}>
 						<Router>
 							<Content />
 						</Router>
