@@ -16,13 +16,13 @@ function App() {
 					<Grid item xs={12}>
 						<Header />
 					</Grid>
-					<Grid style={{ minHeight: "80vh" }} item xs={12}>
+					<Grid item xs={12}>
 						<Router>
 							<Content />
 						</Router>
 					</Grid>
 				</Grid>
-				<Grid item xs={12}>
+				<Grid item xs={12} style={{ marginTop: 30 }}>
 					<Footer />
 				</Grid>
 			</Container>

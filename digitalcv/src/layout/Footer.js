@@ -5,33 +5,21 @@ import { footerLinks } from "../data/footerLinks";
 
 const useStyles = makeStyles((theme) => ({
 	footer: {
-		backgroundColor: theme.palette.background.primary,
-		margin: 10,
+		marginTop: 0,
+		backgroundColor: theme.palette.primary,
 	},
 	footerItem: {
 		textAlign: "center",
+		fontColor: theme.palette.text.secondary,
 	},
 }));
 export default function Footer() {
 	const classes = useStyles();
-	console.log(footerLinks);
 	return (
-		<Grid
-			container
-			justify="space-around"
-			alignItems="center"
-			direction="row"
-			className={classes.footer}
-		>
+		<Grid container justify="center" alignItems="center" direction="row">
 			{footerLinks.map(({ name, icon, link }) => {
 				return (
-					<Grid
-						key={name}
-						item
-						xs={"auto"}
-						md={"auto"}
-						className={classes.footerItem}
-					>
+					<Grid key={name} item xs={4} md={1} className={classes.footerItem}>
 						<Link
 							href={link}
 							target="_blank"
@@ -43,6 +31,9 @@ export default function Footer() {
 					</Grid>
 				);
 			})}
+			<Grid xs={12} md={9} style={{ textAlign: "right" }}>
+				Created with ❤️ in Belgium
+			</Grid>
 		</Grid>
 	);
 }

@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
 		textTransform: "uppercase",
 	},
 	heroCard: {
-		backgroundColor: "#f2f2f2",
+		backgroundColor: theme.palette.background,
 		zIndex: -1,
 		minHeight: 150,
 		borderStyle: "solid",

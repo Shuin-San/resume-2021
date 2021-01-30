@@ -1,11 +1,22 @@
-import Hero from "../layout/Hero";
-import { Grid, Typography, Link } from "@material-ui/core";
+import { Grid, Typography, Link, Card, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import * as data from "../data/personalData";
+
+// Layout Components
+import Hero from "../layout/Hero";
+import InfoCareer from "../layout/InfoCareer";
+import InfoProjects from "../layout/InfoProjects";
 
 const useStyles = makeStyles((theme) => ({
 	shortIntro: {
 		textAlign: "center",
 		paddingTop: 50,
+	},
+	secondHalf: {
+		marginTop: 25,
+		color: theme.palette.text.secondary,
+		textAlign: "center",
+		backgroundColor: theme.palette.background.secondary,
 	},
 }));
 
@@ -43,6 +54,19 @@ export default function Welcome() {
 					</Link>
 				</Typography>
 			</Grid>
+			<Container maxWidth="xl">
+				<Grid
+					container
+					direction="row"
+					className={classes.secondHalf}
+					spacing={6}
+					alignContent="center"
+					justify="space-evenly"
+				>
+					<InfoCareer data={data.career} />
+					<InfoProjects data={data.projects} />
+				</Grid>
+			</Container>
 		</Grid>
 	);
 }
