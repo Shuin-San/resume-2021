@@ -6,6 +6,7 @@ import * as data from "../data/personalData";
 import Hero from "../layout/Hero";
 import InfoCareer from "../layout/InfoCareer";
 import InfoProjects from "../layout/InfoProjects";
+import InfoSkillSet from "../layout/InfoSkillSet";
 
 const useStyles = makeStyles((theme) => ({
 	shortIntro: {
@@ -54,6 +55,7 @@ export default function Welcome() {
 					</Link>
 				</Typography>
 			</Grid>
+			<InfoSkillSet skillSet={data.keySkills} />
 			<Container maxWidth="xl">
 				<Grid
 					container
@@ -64,7 +66,7 @@ export default function Welcome() {
 					justify="space-evenly"
 				>
 					<InfoCareer data={data.career} />
-					<InfoProjects data={data.projects} />
+					{/* <InfoProjects data={data.projects} /> */}
 				</Grid>
 			</Container>
 		</Grid>
