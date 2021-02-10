@@ -38,7 +38,7 @@ export default function Welcome() {
 					JAMStack.
 				</Typography>
 				<Typography variant="subtitle1" component="p" style={{ marginTop: 50 }}>
-					Send me an{" "}
+					Send me an
 					<Link
 						color="textPrimary"
 						href="mailto:hello@zalimidis.dev?subject=Contact request"
@@ -66,7 +66,7 @@ export default function Welcome() {
 					justify="space-evenly"
 				>
 					<InfoCareer data={data.career} />
-					{/* <InfoProjects data={data.projects} /> */}
+					<InfoProjects data={data.projects} />
 				</Grid>
 			</Container>
 		</Grid>
