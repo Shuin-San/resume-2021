@@ -9,7 +9,6 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => {
-	console.log(theme);
 	return {
 		infoTitle: {
 			color: theme.palette.text.secondary,
@@ -85,12 +84,12 @@ export default function InfoCareer({ data }) {
 										</Grid>
 									</Grid>
 								</CardContent>
-								<hr />
+								{/* <hr />
 								<CardActions>
 									<Button variant="outlined" size="small">
 										Read More
 									</Button>
-								</CardActions>
+								</CardActions> */}
 							</Card>
 						</Grid>
 					)

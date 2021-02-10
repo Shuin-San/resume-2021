@@ -1,11 +1,11 @@
-import { Grid, Typography, Link, Card, Container } from "@material-ui/core";
+import { Grid, Typography, Link, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import * as data from "../data/personalData";
 
 // Layout Components
 import Hero from "../layout/Hero";
 import InfoCareer from "../layout/InfoCareer";
-import InfoProjects from "../layout/InfoProjects";
+// import InfoProjects from "../layout/InfoProjects";
 import InfoSkillSet from "../layout/InfoSkillSet";
 
 const useStyles = makeStyles((theme) => ({
@@ -38,7 +38,7 @@ export default function Welcome() {
 					JAMStack.
 				</Typography>
 				<Typography variant="subtitle1" component="p" style={{ marginTop: 50 }}>
-					Send me an
+					Send me an{" "}
 					<Link
 						color="textPrimary"
 						href="mailto:hello@zalimidis.dev?subject=Contact request"
@@ -55,7 +55,6 @@ export default function Welcome() {
 					</Link>
 				</Typography>
 			</Grid>
-			<InfoSkillSet skillSet={data.keySkills} />
 			<Container maxWidth="xl">
 				<Grid
 					container
@@ -65,8 +64,10 @@ export default function Welcome() {
 					alignContent="center"
 					justify="space-evenly"
 				>
+					<InfoSkillSet skillSet={data.keySkills} />
+
 					<InfoCareer data={data.career} />
-					<InfoProjects data={data.projects} />
+					{/* <InfoProjects data={data.projects} /> */}
 				</Grid>
 			</Container>
 		</Grid>
