@@ -40,14 +40,7 @@ export default function InfoSkillSet({ skillSet }) {
 								{name}
 							</Typography>
 							{skills.map(({ id, skillName }) => {
-								return (
-									<Chip
-										key={id}
-										label={skillName}
-										className={classes.chip}
-										size="small"
-									/>
-								);
+								return skillName;
 							})}
 						</Card>
 					);

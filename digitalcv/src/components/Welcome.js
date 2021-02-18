@@ -64,7 +64,7 @@ export default function Welcome() {
 					alignContent="center"
 					justify="space-evenly"
 				>
-					<InfoSkillSet skillSet={data.keySkills} />
+					{/* <InfoSkillSet skillSet={data.keySkills} /> */}
 
 					<InfoCareer data={data.career} />
 					{/* <InfoProjects data={data.projects} /> */}

@@ -34,6 +34,19 @@ export const themeLight = createMuiTheme({
 				fontFamily: "Lato",
 				backgroundColor: "#3A3A3A",
 				color: "#F3F3F3",
+				display: "flex",
+				justiyContent: "space-between",
+				flexDirection: "column",
+			},
+		},
+		MuiLink: {
+			root: {
+				boxShadow: "0px 4px 0px #3a3a3a",
+				transition: "0.25s",
+				textDecoration: "none",
+				"&:hover": {
+					boxShadow: "0px 2px 0px #3a3a3a",
+				},
 			},
 		},
 		MuiButton: {
@@ -49,6 +62,11 @@ export const themeLight = createMuiTheme({
 				fontFamily: "Lato",
 				fontWeight: 700,
 				fontSize: 10,
+			},
+		},
+		MuiChip: {
+			root: {
+				color: "#F3F3F3",
 			},
 		},
 	},

@@ -5,6 +5,7 @@ import {
 	CardContent,
 	CardActions,
 	Button,
+	Chip,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -18,6 +19,10 @@ const useStyles = makeStyles((theme) => {
 			marginTop: theme.spacing(2),
 			textAlign: "left",
 			color: theme.palette.text.secondary,
+			minHeight: "100%",
+		},
+		infoSkills: {
+			marginTop: "auto",
 		},
 	};
 });
@@ -40,6 +45,7 @@ export default function InfoCareer({ data }) {
 							dateEnd,
 							location,
 							jobDescription,
+							toolset,
 						},
 						index
 					) => (
@@ -50,7 +56,7 @@ export default function InfoCareer({ data }) {
 								className={classes.infoContent}
 							>
 								<CardContent>
-									<Grid container direction="row">
+									<Grid container direction="row" justify="space-between">
 										<Grid item xs={12} lg={5}>
 											<Grid item xs={12} lg={6}>
 												<Typography color="textSecondary" gutterBottom>
@@ -84,12 +90,23 @@ export default function InfoCareer({ data }) {
 										</Grid>
 									</Grid>
 								</CardContent>
-								{/* <hr />
-								<CardActions>
-									<Button variant="outlined" size="small">
-										Read More
-									</Button>
-								</CardActions> */}
+								<CardActions className={classes.infoSkills}>
+									<Grid
+										container
+										direction="row"
+										alignItems="center"
+										justify="center"
+										spacing={1}
+									>
+										{toolset.map((tool, index) => {
+											return (
+												<Grid key={index} item>
+													<Chip label={tool} size="small" variant="outlined" />
+												</Grid>
+											);
+										})}
+									</Grid>
+								</CardActions>
 							</Card>
 						</Grid>
 					)
